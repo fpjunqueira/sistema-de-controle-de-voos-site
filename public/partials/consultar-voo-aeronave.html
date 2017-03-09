@@ -1,0 +1,42 @@
+<voo-cabecalho titulo="Sistema de Busca de Voos" subtitulo="Consultar detalhes do Voo"
+                    informacoes="Consulte aqui os detalhes da aeronave">
+</voo-cabecalho>
+
+<p ng-show="mensagem.length" class="alert alert-danger">
+    {{mensagem}}
+</p>
+
+<ul class="nav nav-tabs">
+    <li class=""><a data-toggle="tab" ng-href="{{url}}#/voo/{{voo.id}}/horarios">Horários</a></li>
+    <li class=""><a data-toggle="tab" ng-href="{{url}}#/voo/{{voo.id}}/rota">Rota do Voo</a></li>
+    <li class=""><a data-toggle="tab" ng-href="{{url}}#/voo/{{voo.id}}/piloto">Piloto</a></li>
+    <li class="active"><a data-toggle="tab" ng-href="{{url}}#/voo/{{voo.id}}/aeronave">Aeronave</a></li>
+</ul>
+
+<br>
+<div class="row">
+    <div class="panel-group">
+        <div class="panel panel-primary">
+            <div class="panel-heading">Detalhes da Aeronave</div>
+            <div class="panel-body">
+              <div class="form-group col-md-6">
+                <label for="modelo">Modelo</label>
+                <input type="text" id="modelo" class="form-control" value="{{voo.aviao.modelo}}" disabled>
+              </div>
+              <div class="form-group col-md-6">
+                <label for="fabricante">Fabricante</label>
+                <input type="text" id="fabricante" class="form-control" value="{{voo.aviao.fabricante}}" disabled>
+              </div>
+
+              <div class="form-group col-md-6">
+                <label for="registroAeronave">Registro da Aeronave</label>
+                <input type="text" id="registroAeronave" class="form-control" value="{{voo.aviao.registro}}" disabled>
+              </div>
+              <div class="form-group col-md-6">
+                <label for="ano">Ano de fabricação</label>
+                <input type="text" id="ano" class="form-control" value="{{voo.aviao.ano}}" disabled>
+              </div>
+            </div>
+        </div>
+    </div>
+</div>

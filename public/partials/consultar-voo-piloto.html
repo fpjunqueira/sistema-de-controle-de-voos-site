@@ -1,0 +1,42 @@
+<voo-cabecalho titulo="Sistema de Busca de Voos" subtitulo="Consultar detalhes do Voo"
+                    informacoes="Consulte aqui os detalhes do piloto responsável pelo voo">
+</voo-cabecalho>
+
+<p ng-show="mensagem.length" class="alert alert-danger">
+    {{mensagem}}
+</p>
+
+<ul class="nav nav-tabs">
+    <li class=""><a data-toggle="tab" ng-href="{{url}}#/voo/{{voo.id}}/horarios">Horários</a></li>
+    <li class=""><a data-toggle="tab" ng-href="{{url}}#/voo/{{voo.id}}/rota">Rota do Voo</a></li>
+    <li class="active"><a data-toggle="tab" ng-href="{{url}}#/voo/{{voo.id}}/piloto">Piloto</a></li>
+    <li class=""><a data-toggle="tab" ng-href="{{url}}#/voo/{{voo.id}}/aeronave">Aeronave</a></li>
+</ul>
+
+<br>
+<div class="row">
+    <div class="panel-group">
+        <div class="panel panel-primary">
+            <div class="panel-heading">Detalhes do Piloto</div>
+            <div class="panel-body">
+              <div class="form-group col-md-6">
+                <label for="nome">Nome</label>
+                <input type="text" id="nome" class="form-control" value="{{voo.piloto.nome}}" disabled>
+              </div>
+              <div class="form-group col-md-6">
+                <label for="documento">Documento</label>
+                <input type="text" id="documento" class="form-control" value="{{voo.piloto.documento}}" disabled>
+              </div>
+              <div class="form-group col-md-6">
+                <label for="cma">CMA</label>
+                <input type="text" id="cma" class="form-control" value="{{voo.piloto.cma}}" disabled>
+              </div>
+              <div class="form-group col-md-6">
+                <label for="horasVoo">Horas de Voo</label>
+                <input type="text" id="horasVoo" class="form-control" value="{{voo.piloto.horasDeVoo}}" disabled>
+              </div>
+            </div>
+        </div>
+    </div>
+
+</div>
