@@ -7,10 +7,10 @@
 </p>
 
 <ul class="nav nav-tabs">
-    <li class=""><a data-toggle="tab" ng-href="{{url}}#/voos/{{voo.id}}/horarios">Horários</a></li>
-    <li class=""><a data-toggle="tab" ng-href="{{url}}#/voos/{{voo.id}}/rota">Rota do Voo</a></li>
-    <li class="active"><a data-toggle="tab" ng-href="{{url}}#/voos/{{voo.id}}/piloto">Piloto</a></li>
-    <li class=""><a data-toggle="tab" ng-href="{{url}}#/voos/{{voo.id}}/aeronave">Aeronave</a></li>
+    <li ng-class="{active:index === 'horarios'}"><a ng-href="{{url}}#/voos/{{voo.id}}/horarios">Horários</a></li>
+    <li ng-class="{active:index === 'rota'}"><a ng-href="{{url}}#/voos/{{voo.id}}/rota">Rota do Voo</a></li>
+    <li ng-class="{active:index === 'piloto'}"><a ng-href="{{url}}#/voos/{{voo.id}}/piloto">Piloto</a></li>
+    <li ng-class="{active:index === 'aeronave'}"><a ng-href="{{url}}#/voos/{{voo.id}}/aeronave">Aeronave</a></li>
 </ul>
 
 <br>

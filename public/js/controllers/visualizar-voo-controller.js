@@ -3,6 +3,7 @@ angular.module('controlador-de-voos').controller('VisualizarVooController', func
     $scope.voo = {};
     $scope.mensagem = '';
     $scope.url = 'http://localhost:8081/';
+    $scope.index = $routeParams.view;
 
     $http.get('http://localhost:8080/voos/' + $routeParams.id)
         .success(function(retorno) {
