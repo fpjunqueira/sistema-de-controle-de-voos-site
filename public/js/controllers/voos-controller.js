@@ -7,7 +7,7 @@ angular.module('controlador-de-voos').controller('VoosController', function($sco
 
     console.log($location.search().teste);
 
-    $http.get('http://localhost:8080/voo')
+    $http.get('http://localhost:8080/voos')
         .success(function(retorno) {
             $scope.voos = retorno;
         })

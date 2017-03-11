@@ -4,7 +4,7 @@ angular.module('controlador-de-voos').controller('VisualizarVooController', func
     $scope.mensagem = '';
     $scope.url = 'http://localhost:8081/';
 
-    $http.get('http://localhost:8080/voo/' + $routeParams.id)
+    $http.get('http://localhost:8080/voos/' + $routeParams.id)
         .success(function(retorno) {
             $scope.voo = retorno;
             if (retorno == '') {
@@ -14,5 +14,6 @@ angular.module('controlador-de-voos').controller('VisualizarVooController', func
         .error(function(erro) {
             console.log(erro);
             $scope.mensagem = 'Não foi possível buscar voo'
-        });
+        }
+    );
 });
