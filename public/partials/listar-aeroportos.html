@@ -7,17 +7,10 @@
 </p>
 
 <div class="row">
-  <form class="navbar-form navbar-left" role="search">
       <div class="form-group">
-          <input type="text" class="form-control" placeholder="Filtrar...">
-              <span class="glyphicon glyphicon-search"></span> Buscar
-          </button>
+          <input type="text" class="form-control" placeholder="Filtrar..." ng-model="filtro">
       </div>
-  </form>
 </div>
-
-
-<h2>Mudar tabela</h2>
 <hr>
 <div class="row">
     <div class="col-md-12">
@@ -25,28 +18,28 @@
         <table class="table">
           <thead>
             <tr>
-              <th>Partida</th>
-              <th>Chegada</th>
-              <th>Origem</th>
-              <th>Destino</th>
-              <th>Aviao</th>
-              <th>Piloto</th>
-              <th></th>
+            	<th>IATA</th>
+            	<th>ICAO</th>
+            	<th>Nome</th>
+            	<th>Cidade</th>
+            	<th>UF</th>
+            	<th>Pais</th>
+            	<th>UTC</th>
+            	<th>Latitude</th>
+            	<th>Longitude</th>
             </tr>
           </thead>
           <tbody >
-            <tr ng-repeat="voo in voos | filter: filtro">
-              <td>{{voo.horarioDePartidaUTC}}</td>
-              <td>{{voo.horarioDeChegadaUTC}}</td>
-              <td>{{voo.destino.nome}}</td>
-              <td>{{voo.destino.nome}}</td>
-              <td>{{voo.aviao.modelo}}</td>
-              <td>{{voo.piloto.nome}}</td>
-              <td>
-                  <a href="{{url}}#/voo/{{voo.id}}" class="btn btn-info">
-                      <span class="glyphicon glyphicon-plane"></span>
-                  </a>
-              </td>
+            <tr ng-repeat="aeroporto in aeroportos | filter: filtro">
+              <td>{{aeroporto.iata}}</td>
+              <td>{{aeroporto.icao}}</td>
+              <td>{{aeroporto.nome}}</td>
+              <td>{{aeroporto.cidade}}</td>
+              <td>{{aeroporto.uf}}</td>
+              <td>{{aeroporto.pais}}</td>
+              <td>{{aeroporto.utc}}</td>
+              <td>{{aeroporto.latitude}}</td>
+              <td>{{aeroporto.longitude}}</td>
             </tr>
           </tbody>
         </table>

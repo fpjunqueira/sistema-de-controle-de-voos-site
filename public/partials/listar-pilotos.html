@@ -7,29 +7,9 @@
 </p>
 
 <div class="row">
-  <form class="navbar-form navbar-left" role="search">
       <div class="form-group">
-          <input type="text" class="form-control" placeholder="Filtrar...">
-              <span class="glyphicon glyphicon-search"></span> Buscar
-          </button>
+          <input type="text" class="form-control" placeholder="Filtrar..." ng-model="filtro">
       </div>
-  </form>
-</div>
-
-
-<h2>Mudar tabela</h2>
-
-<div class="row">
-  <form class="navbar-form navbar-left" role="search">
-      <div class="form-group">
-          <input type="text" class="form-control" placeholder="Filtrar...">
-          <input id="dataHoraDecolagem" type="date" class="form-control" ng-model="buscaDataDecolagem" required>
-          <input id="dataHoraPouso" type="date" class="form-control" ng-model="buscaDataPouso" required>
-          <button class="btn btn btn-success" ng-click="buscar()">
-              <span class="glyphicon glyphicon-search"></span> Buscar
-          </button>
-      </div>
-  </form>
 </div>
 
 <hr>
@@ -39,28 +19,18 @@
         <table class="table">
           <thead>
             <tr>
-              <th>Partida</th>
-              <th>Chegada</th>
-              <th>Origem</th>
-              <th>Destino</th>
-              <th>Aviao</th>
-              <th>Piloto</th>
-              <th></th>
+              <th>Nome</th>
+              <th>Documento</th>
+              <th>CMA</th>
+              <th>Horas de Voo</th>
             </tr>
           </thead>
           <tbody >
-            <tr ng-repeat="voo in voos | filter: filtro">
-              <td>{{voo.horarioDePartidaUTC}}</td>
-              <td>{{voo.horarioDeChegadaUTC}}</td>
-              <td>{{voo.destino.nome}}</td>
-              <td>{{voo.destino.nome}}</td>
-              <td>{{voo.aviao.modelo}}</td>
-              <td>{{voo.piloto.nome}}</td>
-              <td>
-                  <a href="{{url}}#/voo/{{voo.id}}" class="btn btn-info">
-                      <span class="glyphicon glyphicon-plane"></span>
-                  </a>
-              </td>
+            <tr ng-repeat="piloto in pilotos | filter: filtro">
+              <td>{{piloto.nome}}</td>
+              <td>{{piloto.documento}}</td>
+              <td>{{piloto.cma}}</td>
+              <td>{{piloto.horasDeVoo}}</td>
             </tr>
           </tbody>
         </table>
