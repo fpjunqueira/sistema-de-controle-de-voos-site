@@ -1,10 +1,23 @@
-<voo-cabecalho titulo="Sistema de Busca de Voos" subtitulo="Buscar Voos Por Período"
-                    informacoes="Utilize os campos para pesquisar voos disponívels no período escolhido e aplicar filtro nos elementos retornados">
+<voo-cabecalho titulo="Sistema de Busca de Voos" subtitulo="Pilotos cadastrados"
+                    informacoes="Lista dos pilotos cadastrados no sistemaa">
 </voo-cabecalho>
 
 <p ng-show="mensagem.length" class="alert alert-danger">
     {{mensagem}}
 </p>
+
+<div class="row">
+  <form class="navbar-form navbar-left" role="search">
+      <div class="form-group">
+          <input type="text" class="form-control" placeholder="Filtrar...">
+              <span class="glyphicon glyphicon-search"></span> Buscar
+          </button>
+      </div>
+  </form>
+</div>
+
+
+<h2>Mudar tabela</h2>
 
 <div class="row">
   <form class="navbar-form navbar-left" role="search">
@@ -44,7 +57,7 @@
               <td>{{voo.aviao.modelo}}</td>
               <td>{{voo.piloto.nome}}</td>
               <td>
-                  <a href="{{url}}#/voos/{{voo.id}}" class="btn btn-info">
+                  <a href="{{url}}#/voo/{{voo.id}}" class="btn btn-info">
                       <span class="glyphicon glyphicon-plane"></span>
                   </a>
               </td>

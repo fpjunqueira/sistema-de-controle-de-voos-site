@@ -5,8 +5,6 @@ angular.module('controlador-de-voos').controller('VoosController', function($sco
     $scope.mensagem = '';
     $scope.url = 'http://localhost:8081/';
 
-    console.log($location.search().teste);
-
     $http.get('http://localhost:8080/voos')
         .success(function(retorno) {
             $scope.voos = retorno;

@@ -1,5 +1,5 @@
-<voo-cabecalho titulo="Sistema de Busca de Voos" subtitulo="Buscar Voos Por Período"
-                    informacoes="Utilize os campos para pesquisar voos disponívels no período escolhido e aplicar filtro nos elementos retornados">
+<voo-cabecalho titulo="Sistema de Busca de Voos" subtitulo="Aeroportos cadastrados"
+                    informacoes="Lista dos aeroportos cadastrados no sistemaa">
 </voo-cabecalho>
 
 <p ng-show="mensagem.length" class="alert alert-danger">
@@ -10,15 +10,14 @@
   <form class="navbar-form navbar-left" role="search">
       <div class="form-group">
           <input type="text" class="form-control" placeholder="Filtrar...">
-          <input id="dataHoraDecolagem" type="date" class="form-control" ng-model="buscaDataDecolagem" required>
-          <input id="dataHoraPouso" type="date" class="form-control" ng-model="buscaDataPouso" required>
-          <button class="btn btn btn-success" ng-click="buscar()">
               <span class="glyphicon glyphicon-search"></span> Buscar
           </button>
       </div>
   </form>
 </div>
 
+
+<h2>Mudar tabela</h2>
 <hr>
 <div class="row">
     <div class="col-md-12">
@@ -44,7 +43,7 @@
               <td>{{voo.aviao.modelo}}</td>
               <td>{{voo.piloto.nome}}</td>
               <td>
-                  <a href="{{url}}#/voos/{{voo.id}}" class="btn btn-info">
+                  <a href="{{url}}#/voo/{{voo.id}}" class="btn btn-info">
                       <span class="glyphicon glyphicon-plane"></span>
                   </a>
               </td>
