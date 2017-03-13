@@ -26,8 +26,9 @@
         <table class="table">
           <thead>
             <tr>
-              <th>Partida</th>
-              <th>Chegada</th>
+              <th>Status</th>
+              <th>Partida UTC</th>
+              <th>Chegada UTC</th>
               <th>Origem</th>
               <th>Destino</th>
               <th>Aviao</th>
@@ -37,6 +38,7 @@
           </thead>
           <tbody >
             <tr ng-repeat="voo in voos | filter: filtro">
+              <td>{{voo.status}}</td>
               <td>{{voo.horarioDePartidaUTC}}</td>
               <td>{{voo.horarioDeChegadaUTC}}</td>
               <td>{{voo.destino.nome}}</td>
