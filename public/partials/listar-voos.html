@@ -10,8 +10,8 @@
   <form class="navbar-form navbar-left" role="search">
       <div class="form-group">
           <input type="text" class="form-control" placeholder="Filtrar..." ng-model="filtro">
-          <input id="dataHoraDecolagem" type="date" class="form-control" ng-model="buscaDataDecolagem" required>
-          <input id="dataHoraPouso" type="date" class="form-control" ng-model="buscaDataPouso" required>
+          <input id="dataInicial" type="date" class="form-control" ng-model="buscaDataInicial">
+          <input id="buscaDataFinal" type="date" class="form-control" ng-model="buscaDataFinal">
           <button class="btn btn btn-success" ng-click="buscar()">
               <span class="glyphicon glyphicon-search"></span> Buscar
           </button>
