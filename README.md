@@ -5,7 +5,7 @@ O Sistema de Controle de Voos foi desenvolvido para armazenamento, busca e detal
 
 **Execução:**
 
-Para subir um servidor http python é necessário entrar no diretório e public executar `$ python -m SimpleHTTPServer 8081`.
+Para subir um servidor http python é necessário entrar no diretório public e executar `$ python -m SimpleHTTPServer 8081`.
 
 Será iniciado em **localhost** porta **8081**.
 
